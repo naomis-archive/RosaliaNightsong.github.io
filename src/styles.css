@@ -1,0 +1,68 @@
+main p {
+  font-size: 16px;
+}
+
+body {
+  color: #90ee90;
+}
+
+main {
+  padding: 20px;
+  border-radius: 25px;
+}
+
+body::before {
+  content: "";
+  background: url(./assets/Moonlight.png);
+  background-size: cover;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  --scrollbarBG: #013220;
+  --thumbBG: #90ee90;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+a {
+  color: inherit;
+  position: relative;
+  font-weight: bold;
+}
+
+a:hover {
+  color: white;
+  background-color: #013220;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+ul {
+  list-style-type: "💜 ";
+}
+
+li {
+  margin-bottom: 10px;
+}
