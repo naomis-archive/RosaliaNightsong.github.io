@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NavbarComponent } from './navbar.component';
 
 const links = [
-  { text: 'Becca Lyria', url: '/' },
+  { text: 'Rosalia Nightsong', url: '/' },
   { text: 'About Me!', url: '/bio' },
   { text: 'View Art', url: '/gallery' },
   { text: 'My Adventures', url: '/adventures' },
