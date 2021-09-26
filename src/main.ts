@@ -7,10 +7,10 @@ import * as Sentry from '@sentry/angular';
 import { Integrations } from '@sentry/tracing';
 
 Sentry.init({
-  dsn: 'https://fb6cac05793c4859a2f9f328941c77c9@o557610.ingest.sentry.io/5755340',
+  dsn: 'https://6bb58a1384b6458f9812110b5e4a63ed@o1014580.ingest.sentry.io/5979787',
   integrations: [
     new Integrations.BrowserTracing({
-      tracingOrigins: ['localhost', 'https://www.beccalyria.com'],
+      tracingOrigins: ['localhost', 'https://www.rosalianightsong.com'],
       routingInstrumentation: Sentry.routingInstrumentation,
     }),
   ],
