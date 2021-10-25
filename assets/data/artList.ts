@@ -132,4 +132,10 @@ export const artList: ArtInt[] = [
     artist: 'unknown',
     artistUrl: 'https://www.rosalianightsong.com',
   },
+  {
+    fileName: 'lena_smith11.jpg',
+    artName: 'Untitled',
+    artist: 'Lena',
+    artistUrl: 'https://www.twitter.com/lena_smith11/',
+  },
 ];
