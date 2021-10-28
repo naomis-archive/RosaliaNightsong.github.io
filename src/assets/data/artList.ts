@@ -110,7 +110,7 @@ export const artList: ArtInt[] = [
   },
   {
     fileName: 'untitled.jpg',
-    artName: 'Untitled',
+    artName: 'Divine Elegance',
     artist: 'unknown',
     artistUrl: 'https://www.rosalianightsong.com',
   },
@@ -122,19 +122,19 @@ export const artList: ArtInt[] = [
   },
   {
     fileName: 'untitled2.jpg',
-    artName: 'Untitled',
+    artName: 'Swift Justice',
     artist: 'unknown',
     artistUrl: 'https://www.rosalianightsong.com',
   },
   {
     fileName: 'untitled3.jpg',
-    artName: 'Untitled',
+    artName: 'The Sweetest Smile',
     artist: 'unknown',
     artistUrl: 'https://www.rosalianightsong.com',
   },
   {
     fileName: 'lena_smith11.jpg',
-    artName: 'Untitled',
+    artName: 'A Night on the Town',
     artist: 'Lena',
     artistUrl: 'https://www.twitter.com/lena_smith11/',
   },
