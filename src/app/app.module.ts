@@ -10,6 +10,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { BioComponent } from './bio/bio.component';
 import { Router } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { GamesComponent } from './games/games.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     GalleryComponent,
     BioComponent,
-    FooterComponent
+    FooterComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule,

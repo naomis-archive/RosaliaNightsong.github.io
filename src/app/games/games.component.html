@@ -1,0 +1,21 @@
+<h1>My Adventures</h1>
+<p>These images come from the various adventures I've undertaken.</p>
+<div class="grid-container">
+  <div class="grid-box" *ngFor="let game of games">
+    <a href="../../assets/games/{{ game.fileName }}" target="_blank"
+      ><img
+        class="grid-image art-image"
+        src="../../assets/games/{{ game.fileName }}"
+    /></a>
+    <hr />
+    <p>
+      <a
+        class="game-link"
+        href="{{ game.gameUrl }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><em class="game-name">{{ game.gameName }}</em>
+      </a>
+    </p>
+  </div>
+</div>
