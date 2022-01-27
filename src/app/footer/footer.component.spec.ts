@@ -23,7 +23,7 @@ describe('FooterComponent', () => {
 
   it('should render the expected texts', () => {
     const [copyright, credit] = compiled.querySelectorAll('p');
-    expect(copyright.innerText.trim()).toBe('© 2021 - Nicholas Carrigan');
+    expect(copyright.innerText.trim()).toBe('© 2021 - Naomi Carrigan');
     expect(credit.innerText.trim()).toBe('Webpage art by Moonlight');
   });
 });
