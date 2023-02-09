@@ -13,7 +13,7 @@ main {
 
 body::before {
   content: "";
-  background: url(./assets/Moonlight.png);
+  background: url(https://cdn.nhcarrigan.com/banners/rosalia.png);
   background-size: cover;
   opacity: 0.9;
   top: 0;
