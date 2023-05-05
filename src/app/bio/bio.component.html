@@ -1,5 +1,11 @@
-<h1>About Me</h1>
-<div *ngFor="let detail of details">
-  <h2>{{detail.category}}</h2>
-  <p>{{detail.data}}</p>
+<div class="content">
+  <div class="nes-container with-title is-centered is-rounded">
+    <h1>About Me</h1>
+    <div *ngFor="let detail of details">
+      <h2>{{ detail.category }}</h2>
+      <p>{{ detail.data }}</p>
+    </div>
+  </div>
+  <a routerLink="/gallery" class="nes-btn">View Rosalia art</a>
+  <a routerLink="/adventures" class="nes-btn">View Rosalia's Adventures</a>
 </div>

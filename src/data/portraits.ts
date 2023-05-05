@@ -1,11 +1,6 @@
-export interface ArtInt {
-  fileName: string;
-  artName: string;
-  artist: string;
-  artistUrl: string;
-}
+import { Portrait } from "src/interfaces/Portrait";
 
-export const artList: ArtInt[] = [
+export const portraits: Portrait[] = [
   {
     fileName: 'moonlight1.jpg',
     artName: 'And I Wake Up Falling',

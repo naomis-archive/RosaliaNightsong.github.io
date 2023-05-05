@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { bioData, BioInt } from 'src/assets/data/bio';
+import { bioData, BioInt } from 'src/data/bio';
 
 @Component({
   selector: 'app-bio',
   templateUrl: './bio.component.html',
-  styleUrls: ['./bio.component.css'],
+  styleUrls: [],
 })
 export class BioComponent implements OnInit {
   details: BioInt[] = [];
