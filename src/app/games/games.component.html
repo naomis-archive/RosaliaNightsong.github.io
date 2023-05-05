@@ -1,21 +1,35 @@
-<h1>My Adventures</h1>
-<p>These images come from the various adventures I've undertaken.</p>
-<div class="grid-container">
-  <div class="grid-box" *ngFor="let game of games">
-    <a href="https://cdn.naomi.lgbt/rosalia/games/{{ game.fileName }}" target="_blank"
-      ><img
-        class="grid-image art-image"
-        src="https://cdn.naomi.lgbt/rosalia/games/{{ game.fileName }}"
-    /></a>
-    <hr />
+<div class="content">
+  <div class="nes-container with-title is-centered is-rounded">
+    <h1 class="title">Adventures</h1>
+    <p>Images of the adventures that Rosalia has been on.</p>
     <p>
-      <a
-        class="game-link"
-        href="{{ game.gameUrl }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><em class="game-name">{{ game.gameName }}</em>
-      </a>
+      There are <strong>{{ games.length }}</strong> adventures available to
+      revisit.
     </p>
   </div>
+  <div class="nes-container is-rounded is-centered game">
+    <a
+      href="https://cdn.naomi.lgbt/rosalia/games/{{
+        games[currentGameIndex].fileName
+      }}"
+      target="_blank"
+    >
+      <img
+        src="https://cdn.naomi.lgbt/rosalia/games/{{
+          games[currentGameIndex].fileName
+        }}"
+        alt="{{ games[currentGameIndex].game }}"
+      />
+    </a>
+    <p class="game-title">{{ games[currentGameIndex].game }}</p>
+    <button class="nes-btn" (click)="previousGame()">Previous Adventure</button>
+    <button class="nes-btn" (click)="nextGame()">Next Adventure</button>
+    <select #gameOpt (change)="selectGame(gameOpt.value)">
+      <option disabled selected>Jump to Adventure</option>
+      <option *ngFor="let game of games; let i = index" [value]="i">
+        {{ game.game }}
+      </option>
+    </select>
+  </div>
+  <a class="nes-btn" routerLink="/rosa">That's enough for today</a>
 </div>

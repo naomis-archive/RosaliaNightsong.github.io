@@ -4,28 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BioComponent } from './bio/bio.component';
 import { Router } from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
 import { GamesComponent } from './games/games.component';
+import { RosaComponent } from './rosa/rosa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     HomeComponent,
     GalleryComponent,
     BioComponent,
-    FooterComponent,
-    GamesComponent
+    GamesComponent,
+    RosaComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [
     {
       provide: ErrorHandler,
@@ -44,6 +39,6 @@ import { GamesComponent } from './games/games.component';
       multi: true,
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

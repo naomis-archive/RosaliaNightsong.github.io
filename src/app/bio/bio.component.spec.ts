@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { bioData } from 'src/assets/data/bio';
+import { bioData } from 'src/data/bio';
 
 import { BioComponent } from './bio.component';
 
