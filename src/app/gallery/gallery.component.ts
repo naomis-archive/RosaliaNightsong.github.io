@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Emote } from 'src/interfaces/Emote';
 import { Portrait } from 'src/interfaces/Portrait';
-import { poses } from 'src/data/poses';
-import { portraits } from 'src/data/portraits';
-import { HelpersService } from '../helpers.service';
+import { AssetsService } from '../assets.service';
 
 type viewType = 'intro' | 'portrait' | 'pose';
 
@@ -12,7 +9,7 @@ type viewType = 'intro' | 'portrait' | 'pose';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css'],
 })
-export class GalleryComponent implements OnInit {
+export class GalleryComponent {
   public view: viewType = 'intro';
   public portraits: Portrait[] = [];
   public poses: string[] = [];
@@ -20,19 +17,13 @@ export class GalleryComponent implements OnInit {
   public currentEmoteIndex = 0;
   public currentPoseIndex = 0;
 
-  ngOnInit(): void {
-    this.portraits = portraits.sort((a, b) =>
-      HelpersService.numericSort(
-        HelpersService.parseFileName(a.fileName),
-        HelpersService.parseFileName(b.fileName)
-      )
-    );
-    this.poses = poses.sort((a, b) =>
-      HelpersService.numericSortWithHyphen(
-        HelpersService.parseFileName(a),
-        HelpersService.parseFileName(b)
-      )
-    );
+  constructor(private assetService: AssetsService) {
+    this.assetService.fetchPortraits().subscribe((portraits) => {
+      this.portraits = portraits.sort((a, b) => a.name.localeCompare(b.name));
+    });
+    this.assetService.fetchPoses().subscribe((poses) => {
+      this.poses = poses.sort((a, b) => a.localeCompare(b));
+    });
   }
 
   changeView(name: viewType) {

@@ -1,18 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { adventures } from 'src/data/adventures';
+import { Component } from '@angular/core';
 import { Adventure } from 'src/interfaces/Adventure';
+import { AssetsService } from '../assets.service';
 
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.css'],
 })
-export class GamesComponent implements OnInit {
+export class GamesComponent {
   public games: Adventure[] = [];
   public currentGameIndex = 0;
 
-  ngOnInit(): void {
-    this.games = adventures.sort((a, b) => a.game.localeCompare(b.game));
+  constructor(private assetService: AssetsService) {
+    this.assetService.fetchAdventures().subscribe((adventures) => {
+      this.games = adventures.sort((a, b) => a.game.localeCompare(b.game));
+    });
   }
 
   nextGame() {

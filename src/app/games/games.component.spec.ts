@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GamesComponent } from './games.component';
-import { gamesFiles } from 'src/assets/fileList';
-import { adventures } from 'src/data/adventures';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('GamesComponent', () => {
   let component: GamesComponent;
@@ -12,9 +11,20 @@ describe('GamesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [GamesComponent],
+      imports: [HttpClientModule],
     }).compileComponents();
     fixture = TestBed.createComponent(GamesComponent);
     component = fixture.componentInstance;
+    component.games = [
+      {
+        fileName: 'divinity-original-sin-ii.jpg',
+        game: 'Divinity: Original Sin II',
+      },
+      {
+        fileName: 'dragon-age-ii.jpg',
+        game: 'Dragon Age II',
+      },
+    ];
     fixture.detectChanges();
     compiled = fixture.nativeElement;
   });
@@ -25,7 +35,6 @@ describe('GamesComponent', () => {
 
   it('should have the expected properties', () => {
     expect(component.games).toBeDefined();
-    expect(component.games).toEqual(adventures);
   });
 
   it('should render the games view', () => {
@@ -44,9 +53,9 @@ describe('GamesComponent', () => {
     expect(buttons[2].getAttribute('routerLink')).toBe('/rosa');
   });
 
-  for (const adventure of adventures) {
-    it(`should render the ${adventure.fileName} adventure`, () => {
-      component.selectGame(String(adventures.indexOf(adventure)));
+  it(`should render the adventures correctly`, () => {
+    for (const adventure of component.games) {
+      component.selectGame(String(component.games.indexOf(adventure)));
       fixture.detectChanges();
       compiled = fixture.nativeElement;
       const game = compiled.querySelector('.game');
@@ -62,23 +71,6 @@ describe('GamesComponent', () => {
       expect(img?.getAttribute('alt')).toBe(adventure.game);
       const title = game?.querySelector('p');
       expect(title?.textContent?.trim()).toBe(adventure.game);
-    });
-  }
-
-  it(`should have data for all games`, () => {
-    expect(adventures.length).toBe(gamesFiles.length);
+    }
   });
-
-  for (const data of adventures) {
-    it(`${data.fileName} should exist in the CDN`, () => {
-      expect(gamesFiles).toContain(data.fileName);
-    });
-  }
-
-  for (const file of gamesFiles) {
-    it(`should display the ${file} adventure`, () => {
-      const adventure = adventures.find((el) => el.fileName === file);
-      expect(adventure).toBeDefined();
-    });
-  }
 });

@@ -39,9 +39,10 @@
       />
     </a>
     <p>
+      <em>{{ portraits[currentPortraitIndex].name }}</em>
       By
       <a
-        href="{{ portraits[currentPortraitIndex].artistUrl }}"
+        href="{{ portraits[currentPortraitIndex].url }}"
         target="_blank"
         rel="noopener noreferrer"
         >{{ portraits[currentPortraitIndex].artist }}</a
@@ -54,7 +55,7 @@
     <select #portrait (change)="selectPortrait(portrait.value)">
       <option disabled selected>Jump to Portrait</option>
       <option *ngFor="let portrait of portraits; let i = index" [value]="i">
-        {{ portrait.fileName }}
+        {{ portrait.name }}
       </option>
     </select>
   </div>

@@ -1,6 +1,7 @@
 export interface Portrait {
   fileName: string;
+  name: string;
   artist: string;
-  artistUrl: string;
-  artName: string;
+  url: string;
+  alt: string;
 }
