@@ -10,6 +10,7 @@ import { BioComponent } from './bio/bio.component';
 import { Router } from '@angular/router';
 import { GamesComponent } from './games/games.component';
 import { RosaComponent } from './rosa/rosa.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { RosaComponent } from './rosa/rosa.component';
     GamesComponent,
     RosaComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [
     {
       provide: ErrorHandler,
