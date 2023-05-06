@@ -29,4 +29,8 @@ export const adventures: Adventure[] = [
     fileName: 'star-wars-tor.jpg',
     game: 'Star Wars: The Old Republic',
   },
+  {
+    fileName: 'soul-calibur-vi.jpg',
+    game: 'Soul Calibur VI',
+  },
 ];
