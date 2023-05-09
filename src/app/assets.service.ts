@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { Adventure } from 'src/interfaces/Adventure';
 import { Assets } from 'src/interfaces/Assets';
 import { Portrait } from 'src/interfaces/Portrait';
+import { Pose } from 'src/interfaces/Pose';
 
 @Injectable({
   providedIn: 'root',
@@ -40,11 +41,11 @@ export class AssetsService {
     return portraits;
   }
 
-  public fetchPoses(): Observable<string[]> {
+  public fetchPoses(): Observable<Pose[]> {
     if (this._data.poses.length) {
       return of(this._data.poses);
     }
-    const poses = this.http.get<string[]>(
+    const poses = this.http.get<Pose[]>(
       'https://asset-list.naomi.lgbt/json/rosalia/poses.json'
     );
     poses.subscribe((poses) => (this._data.poses = poses));

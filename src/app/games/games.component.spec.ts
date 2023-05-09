@@ -19,10 +19,15 @@ describe('GamesComponent', () => {
       {
         fileName: 'divinity-original-sin-ii.jpg',
         game: 'Divinity: Original Sin II',
+        alt: 'Rosalia in a white robe, leaning on a flaming greatsword.',
+        description: 'Becoming the Godwoken was her true calling.',
       },
       {
         fileName: 'dragon-age-ii.jpg',
         game: 'Dragon Age II',
+        alt: 'Portrait of Rosalia, her hair down with french braids on the sides.',
+        description:
+          "Rosalia doesn't remember much about this adventure, but it was fun.",
       },
     ];
     fixture.detectChanges();
@@ -68,9 +73,11 @@ describe('GamesComponent', () => {
       expect(img?.getAttribute('src')).toBe(
         `https://cdn.naomi.lgbt/rosalia/games/${adventure.fileName}`
       );
-      expect(img?.getAttribute('alt')).toBe(adventure.game);
-      const title = game?.querySelector('p');
+      expect(img?.getAttribute('alt')).toBe(adventure.alt);
+      const title = game?.querySelector('h2');
       expect(title?.textContent?.trim()).toBe(adventure.game);
+      const description = game?.querySelector('p');
+      expect(description?.textContent?.trim()).toBe(adventure.description);
     }
   });
 });
