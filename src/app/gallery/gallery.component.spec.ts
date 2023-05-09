@@ -22,6 +22,8 @@ describe('GalleryComponent', () => {
         artist: 'Moonlight',
         url: 'https://www.instagram.com/moonlightkcreations/',
         alt: 'Rosalia in her typical robe, falling backwards.',
+        description:
+          'The idea for this came to her in a dream, in which she found herself falling helplessly for hours.',
       },
       {
         fileName: 'moonlight2.png',
@@ -29,9 +31,26 @@ describe('GalleryComponent', () => {
         artist: 'Moonlight',
         url: 'https://www.instagram.com/moonlightkcreations/',
         alt: 'Rosalia surrounded by white feathers.',
+        description:
+          'The feathers were a sign of a blessing from her Goddess, and this was a moment she wanted to remember forever.',
       },
     ];
-    component.poses = ['gaming.png', 'peace.png'];
+    component.poses = [
+      {
+        fileName: 'gaming.png',
+        name: 'Gaming',
+        alt: 'Rosalia laying in her bed on her stomach, surrounded by snacks as she plays a game on her laptop.',
+        description:
+          'Unsurprisingly, Rosalia loves RPGs almost as much as she loves actual adventures.',
+      },
+      {
+        fileName: 'peace.png',
+        name: 'Peace Out',
+        alt: 'Rosalia standing in front of a shrine, giving a peace sign with her fingers.',
+        description:
+          "She loves to give the peace sign as she's leaving - she really does want you to have a peaceful day.",
+      },
+    ];
     fixture.detectChanges();
     compiled = fixture.nativeElement;
   });
@@ -96,11 +115,13 @@ describe('GalleryComponent', () => {
       expect(img?.getAttribute('src')).toBe(
         `https://cdn.naomi.lgbt/rosalia/art/${portrait.fileName}`
       );
-      expect(img?.getAttribute('alt')).toBe('');
-      const title = portraitBox?.querySelector('p');
-      expect(title?.textContent?.trim()).toBe(
-        `${portrait.name} By ${portrait.artist}`
-      );
+      expect(img?.getAttribute('alt')).toBe(portrait.alt);
+      const title = portraitBox?.querySelector('h2');
+      expect(title?.textContent?.trim()).toBe(portrait.name);
+      const ps = portraitBox?.querySelectorAll('p');
+      expect(ps?.length).toBe(2);
+      expect(ps?.[0].textContent?.trim()).toBe(portrait.description);
+      expect(ps?.[1].textContent?.trim()).toBe(`-- By ${portrait.artist}`);
     }
   });
 
@@ -134,18 +155,18 @@ describe('GalleryComponent', () => {
       const emoteBox = compiled.querySelector('.image');
       const imageLink = emoteBox?.querySelector('a');
       expect(imageLink?.getAttribute('href')).toBe(
-        `https://cdn.naomi.lgbt/rosalia/koikatsu/${pose}`
+        `https://cdn.naomi.lgbt/rosalia/koikatsu/${pose.fileName}`
       );
       expect(imageLink?.getAttribute('target')).toBe('_blank');
       const img = emoteBox?.querySelector('img');
       expect(img?.getAttribute('src')).toBe(
-        `https://cdn.naomi.lgbt/rosalia/koikatsu/${pose}`
+        `https://cdn.naomi.lgbt/rosalia/koikatsu/${pose.fileName}`
       );
-      expect(img?.getAttribute('alt')).toBe('Naomi');
-      const title = emoteBox?.querySelector('p');
-      expect(title?.textContent?.trim()).toBe(
-        component.getPoseName(component.poses.indexOf(pose))
-      );
+      expect(img?.getAttribute('alt')).toBe(pose.alt);
+      const title = emoteBox?.querySelector('h2');
+      expect(title?.textContent?.trim()).toBe(pose.name);
+      const description = emoteBox?.querySelector('p');
+      expect(description?.textContent?.trim()).toBe(pose.description);
     }
   });
 });

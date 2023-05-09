@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Portrait } from 'src/interfaces/Portrait';
 import { AssetsService } from '../assets.service';
+import { Pose } from 'src/interfaces/Pose';
 
 type viewType = 'intro' | 'portrait' | 'pose';
 
@@ -12,7 +13,7 @@ type viewType = 'intro' | 'portrait' | 'pose';
 export class GalleryComponent {
   public view: viewType = 'intro';
   public portraits: Portrait[] = [];
-  public poses: string[] = [];
+  public poses: Pose[] = [];
   public currentPortraitIndex = 0;
   public currentEmoteIndex = 0;
   public currentPoseIndex = 0;
@@ -22,7 +23,7 @@ export class GalleryComponent {
       this.portraits = portraits.sort((a, b) => a.name.localeCompare(b.name));
     });
     this.assetService.fetchPoses().subscribe((poses) => {
-      this.poses = poses.sort((a, b) => a.localeCompare(b));
+      this.poses = poses.sort((a, b) => a.name.localeCompare(b.name));
     });
   }
 
@@ -65,13 +66,5 @@ export class GalleryComponent {
 
   selectPose(index: string) {
     this.currentPoseIndex = parseInt(index);
-  }
-
-  getPoseName(index: number) {
-    const fileName = this.poses[index];
-    const withoutExtension = fileName.split('.')[0];
-    const [name, number] = withoutExtension.split('-');
-    const titleCasedName = `${name[0].toUpperCase()}${name.slice(1)}`;
-    return number ? `${titleCasedName} ${number}` : titleCasedName;
   }
 }
