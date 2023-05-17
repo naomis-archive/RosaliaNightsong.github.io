@@ -7,7 +7,7 @@
       revisit.
     </p>
   </div>
-  <div class="nes-container is-rounded is-centered game">
+  <div *ngIf="games.length" class="nes-container is-rounded is-centered game">
     <h2 class="title">{{ games[currentGameIndex].game }}</h2>
     <p>{{ games[currentGameIndex].description }}</p>
     <a
