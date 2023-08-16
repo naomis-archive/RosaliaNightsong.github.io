@@ -16,7 +16,7 @@ dependencies:
     version: 16.2.1(@angular/core@16.2.1)
   '@angular/core':
     specifier: 16.2.1
-    version: 16.2.1(rxjs@7.8.1)(zone.js@0.13.0)
+    version: 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
   '@angular/forms':
     specifier: 16.2.1
     version: 16.2.1(@angular/common@16.2.1)(@angular/core@16.2.1)(@angular/platform-browser@16.2.1)(rxjs@7.8.1)
@@ -45,8 +45,8 @@ dependencies:
     specifier: 2.6.1
     version: 2.6.1
   zone.js:
-    specifier: 0.13.0
-    version: 0.13.0
+    specifier: 0.13.1
+    version: 0.13.1
 
 devDependencies:
   '@angular-devkit/build-angular':
@@ -443,7 +443,7 @@ packages:
     peerDependencies:
       '@angular/core': 16.2.1
     dependencies:
-      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.0)
+      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       tslib: 2.6.1
     dev: false
 
@@ -483,7 +483,7 @@ packages:
       '@angular/core': 16.2.1
       rxjs: ^6.5.3 || ^7.4.0
     dependencies:
-      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.0)
+      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       rxjs: 7.8.1
       tslib: 2.6.1
     dev: false
@@ -519,10 +519,10 @@ packages:
       '@angular/core':
         optional: true
     dependencies:
-      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.0)
+      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       tslib: 2.6.1
 
-  /@angular/core@16.2.1(rxjs@7.8.1)(zone.js@0.13.0):
+  /@angular/core@16.2.1(rxjs@7.8.1)(zone.js@0.13.1):
     resolution: {integrity: sha512-Y+0jssQnJPovxMv9cDKYlp6BBHeFBLOHd/+FPv5IIGD1c7NwBP/TImJxCaIV78a57xnO8L0SFacDg/kULzvKrg==}
     engines: {node: ^16.14.0 || >=18.10.0}
     peerDependencies:
@@ -531,7 +531,7 @@ packages:
     dependencies:
       rxjs: 7.8.1
       tslib: 2.6.1
-      zone.js: 0.13.0
+      zone.js: 0.13.1
 
   /@angular/forms@16.2.1(@angular/common@16.2.1)(@angular/core@16.2.1)(@angular/platform-browser@16.2.1)(rxjs@7.8.1):
     resolution: {integrity: sha512-cCygiLfBAsVHdtKmNptlk2IgXu0wjRc8kSiiSnJkfK6U/NiNg8ADMiN7iYgKW2TD1ZRw+7dYZV856lxEy2n0+A==}
@@ -543,7 +543,7 @@ packages:
       rxjs: ^6.5.3 || ^7.4.0
     dependencies:
       '@angular/common': 16.2.1(@angular/core@16.2.1)(rxjs@7.8.1)
-      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.0)
+      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       '@angular/platform-browser': 16.2.1(@angular/animations@16.2.1)(@angular/common@16.2.1)(@angular/core@16.2.1)
       rxjs: 7.8.1
       tslib: 2.6.1
@@ -560,7 +560,7 @@ packages:
     dependencies:
       '@angular/common': 16.2.1(@angular/core@16.2.1)(rxjs@7.8.1)
       '@angular/compiler': 16.2.1(@angular/core@16.2.1)
-      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.0)
+      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       '@angular/platform-browser': 16.2.1(@angular/animations@16.2.1)(@angular/common@16.2.1)(@angular/core@16.2.1)
       tslib: 2.6.1
     dev: false
@@ -578,7 +578,7 @@ packages:
     dependencies:
       '@angular/animations': 16.2.1(@angular/core@16.2.1)
       '@angular/common': 16.2.1(@angular/core@16.2.1)(rxjs@7.8.1)
-      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.0)
+      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       tslib: 2.6.1
     dev: false
 
@@ -592,7 +592,7 @@ packages:
       rxjs: ^6.5.3 || ^7.4.0
     dependencies:
       '@angular/common': 16.2.1(@angular/core@16.2.1)(rxjs@7.8.1)
-      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.0)
+      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       '@angular/platform-browser': 16.2.1(@angular/animations@16.2.1)(@angular/common@16.2.1)(@angular/core@16.2.1)
       rxjs: 7.8.1
       tslib: 2.6.1
@@ -2491,7 +2491,7 @@ packages:
       rxjs: ^6.5.5 || ^7.x
     dependencies:
       '@angular/common': 16.2.1(@angular/core@16.2.1)(rxjs@7.8.1)
-      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.0)
+      '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       '@angular/router': 16.2.1(@angular/common@16.2.1)(@angular/core@16.2.1)(@angular/platform-browser@16.2.1)(rxjs@7.8.1)
       '@sentry/browser': 7.60.1
       '@sentry/types': 7.60.1
@@ -9468,7 +9468,7 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
-  /zone.js@0.13.0:
-    resolution: {integrity: sha512-7m3hNNyswsdoDobCkYNAy5WiUulkMd3+fWaGT9ij6iq3Zr/IwJo4RMCYPSDjT+r7tnPErmY9sZpKhWQ8S5k6XQ==}
+  /zone.js@0.13.1:
+    resolution: {integrity: sha512-+bIeDAFEBYuXRuU3qGQvzdPap+N1zjM4KkBAiiQuVVCrHrhjDuY6VkUhNa5+U27+9w0q3fbKiMCbpJ0XzMmSWA==}
     dependencies:
       tslib: 2.6.1
