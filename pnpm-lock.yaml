@@ -42,8 +42,8 @@ dependencies:
     specifier: 7.8.1
     version: 7.8.1
   tslib:
-    specifier: 2.6.1
-    version: 2.6.1
+    specifier: 2.6.2
+    version: 2.6.2
   zone.js:
     specifier: 0.13.1
     version: 0.13.1
@@ -444,7 +444,7 @@ packages:
       '@angular/core': 16.2.1
     dependencies:
       '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@angular/cli@16.2.0:
@@ -485,7 +485,7 @@ packages:
     dependencies:
       '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       rxjs: 7.8.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@angular/compiler-cli@16.2.1(@angular/compiler@16.2.1)(typescript@5.1.6):
@@ -503,7 +503,7 @@ packages:
       convert-source-map: 1.9.0
       reflect-metadata: 0.1.13
       semver: 7.5.4
-      tslib: 2.6.1
+      tslib: 2.6.2
       typescript: 5.1.6
       yargs: 17.7.2
     transitivePeerDependencies:
@@ -520,7 +520,7 @@ packages:
         optional: true
     dependencies:
       '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
-      tslib: 2.6.1
+      tslib: 2.6.2
 
   /@angular/core@16.2.1(rxjs@7.8.1)(zone.js@0.13.1):
     resolution: {integrity: sha512-Y+0jssQnJPovxMv9cDKYlp6BBHeFBLOHd/+FPv5IIGD1c7NwBP/TImJxCaIV78a57xnO8L0SFacDg/kULzvKrg==}
@@ -530,7 +530,7 @@ packages:
       zone.js: ~0.13.0
     dependencies:
       rxjs: 7.8.1
-      tslib: 2.6.1
+      tslib: 2.6.2
       zone.js: 0.13.1
 
   /@angular/forms@16.2.1(@angular/common@16.2.1)(@angular/core@16.2.1)(@angular/platform-browser@16.2.1)(rxjs@7.8.1):
@@ -546,7 +546,7 @@ packages:
       '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       '@angular/platform-browser': 16.2.1(@angular/animations@16.2.1)(@angular/common@16.2.1)(@angular/core@16.2.1)
       rxjs: 7.8.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@angular/platform-browser-dynamic@16.2.1(@angular/common@16.2.1)(@angular/compiler@16.2.1)(@angular/core@16.2.1)(@angular/platform-browser@16.2.1):
@@ -562,7 +562,7 @@ packages:
       '@angular/compiler': 16.2.1(@angular/core@16.2.1)
       '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       '@angular/platform-browser': 16.2.1(@angular/animations@16.2.1)(@angular/common@16.2.1)(@angular/core@16.2.1)
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@angular/platform-browser@16.2.1(@angular/animations@16.2.1)(@angular/common@16.2.1)(@angular/core@16.2.1):
@@ -579,7 +579,7 @@ packages:
       '@angular/animations': 16.2.1(@angular/core@16.2.1)
       '@angular/common': 16.2.1(@angular/core@16.2.1)(rxjs@7.8.1)
       '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@angular/router@16.2.1(@angular/common@16.2.1)(@angular/core@16.2.1)(@angular/platform-browser@16.2.1)(rxjs@7.8.1):
@@ -595,7 +595,7 @@ packages:
       '@angular/core': 16.2.1(rxjs@7.8.1)(zone.js@0.13.1)
       '@angular/platform-browser': 16.2.1(@angular/animations@16.2.1)(@angular/common@16.2.1)(@angular/core@16.2.1)
       rxjs: 7.8.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@assemblyscript/loader@0.10.1:
@@ -2351,7 +2351,7 @@ packages:
       nx: 16.5.1
       semver: 7.5.3
       tmp: 0.2.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /@nx/nx-darwin-arm64@16.5.1:
@@ -2478,7 +2478,7 @@ packages:
       '@sentry/core': 7.64.0
       '@sentry/types': 7.64.0
       '@sentry/utils': 7.64.0
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@sentry/angular@7.64.0(@angular/common@16.2.1)(@angular/core@16.2.1)(@angular/router@16.2.1)(rxjs@7.8.1):
@@ -2497,7 +2497,7 @@ packages:
       '@sentry/types': 7.64.0
       '@sentry/utils': 7.64.0
       rxjs: 7.8.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@sentry/browser@7.64.0:
@@ -2509,7 +2509,7 @@ packages:
       '@sentry/replay': 7.64.0
       '@sentry/types': 7.64.0
       '@sentry/utils': 7.64.0
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@sentry/core@7.64.0:
@@ -2518,7 +2518,7 @@ packages:
     dependencies:
       '@sentry/types': 7.64.0
       '@sentry/utils': 7.64.0
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@sentry/replay@7.64.0:
@@ -2547,7 +2547,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       '@sentry/types': 7.64.0
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@sigstore/bundle@1.1.0:
@@ -3040,7 +3040,7 @@ packages:
       chalk: 4.1.2
       jsdom: 16.7.0
       object-path: 0.11.8
-      tslib: 2.6.1
+      tslib: 2.6.2
       typescript: 5.1.6
     transitivePeerDependencies:
       - bufferutil
@@ -3066,7 +3066,7 @@ packages:
     engines: {node: '>=14.15.0'}
     dependencies:
       js-yaml: 3.14.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /@zkochan/js-yaml@0.0.6:
@@ -6299,7 +6299,7 @@ packages:
     dependencies:
       copy-anything: 2.0.6
       parse-node-version: 1.0.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     optionalDependencies:
       errno: 0.1.8
       graceful-fs: 4.2.11
@@ -6966,7 +6966,7 @@ packages:
       tar-stream: 2.2.0
       tmp: 0.2.1
       tsconfig-paths: 4.2.0
-      tslib: 2.6.1
+      tslib: 2.6.2
       v8-compile-cache: 2.3.0
       yargs: 17.7.2
       yargs-parser: 21.1.1
@@ -7827,7 +7827,7 @@ packages:
   /rxjs@7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
 
   /safe-buffer@5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
@@ -8630,6 +8630,10 @@ packages:
 
   /tslib@2.6.1:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
+    dev: true
+
+  /tslib@2.6.2:
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
   /tsutils@3.21.0(typescript@5.1.6):
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -9382,4 +9386,4 @@ packages:
   /zone.js@0.13.1:
     resolution: {integrity: sha512-+bIeDAFEBYuXRuU3qGQvzdPap+N1zjM4KkBAiiQuVVCrHrhjDuY6VkUhNa5+U27+9w0q3fbKiMCbpJ0XzMmSWA==}
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
